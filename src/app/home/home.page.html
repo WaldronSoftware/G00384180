@@ -4,5 +4,26 @@
 
 <ion-content [fullscreen]="true">
   
-  
+  <ion-card>
+<!--Display Date-->
+    <ion-item>
+      <p>Report</p>
+      <ion-label slot="end">{{todayDate | date: "EEE dd MMM Y"}}</ion-label>
+    </ion-item>
+
+    <!--Call Weather display and convert to degrees celcius-->
+    <ion-item>
+      <span>
+        {{(weatherTemp?.temp - 273.15).toFixed(0)}}
+      </span>
+      <span>°C</span>
+    </ion-item>
+
+    <!--Display Cityname-->
+    <ion-item>
+      <ion-icon name="location"></ion-icon>
+      <span>{{cityName}}</span>
+    </ion-item>
+
+  </ion-card>
 </ion-content>
