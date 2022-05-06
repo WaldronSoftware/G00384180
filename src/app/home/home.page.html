@@ -1,10 +1,15 @@
-<ion-header [translucent]="true">
+<!--<ion-header [translucent]="true">-->
   
-</ion-header>
+<!--</ion-header>-->
 
 <ion-content [fullscreen]="true">
+
+
   
-  <ion-card>
+  <!-- Animated Searchbar from Ionic-->
+<ion-searchbar animated></ion-searchbar>
+  
+  <ion-card class="cardStyle">
 <!--Display Date-->
     <ion-item>
       <p>Report</p>
@@ -13,17 +18,36 @@
 
     <!--Call Weather display and convert to degrees celcius-->
     <ion-item lines="none">
-      <span>
-        {{(weatherTemp?.temp - 273.15).toFixed(0)}}
+      <span id="temp">
+        {{(weatherTemp?.temp - 273.15).toFixed(0)}}<!--To correct the value-->
       </span>
-      <span>°C</span>
+      <span id="temp">°C</span>
       <img slot="end" [src]=weatherIcon/>
     </ion-item>
 
     <!--Display Cityname-->
-    <ion-item>
-      <ion-icon name="location"></ion-icon>
+    <ion-item lines="none">
+      <ion-icon id="locationIcon" name="location"></ion-icon>
       <span>{{cityName}}</span>
+    </ion-item>
+  </ion-card>
+
+  <!--Display Max Temperature-->
+  <ion-card class="cardStyle">
+    <ion-item lines="none">
+      <span>Maximum Temperature</span>
+      <span slot="end">{{(weatherTemp.temp_max - 273.15).toFixed(0)}}°C</span>
+    </ion-item>
+
+    <!--Display Minimum Temperature-->
+    <ion-item lines="none">
+      <span>Minimum Temperature</span>
+      <span slot="end">{{(weatherTemp.temp_min - 273.15).toFixed(0)}}°C</span>
+    </ion-item>
+
+    <ion-item>
+      <span>Humidity</span>
+      <span slot="end">{{weatherTemp.humidity}}%</span>
     </ion-item>
 
   </ion-card>

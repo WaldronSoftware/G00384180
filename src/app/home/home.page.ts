@@ -16,6 +16,7 @@ export class HomePage {
   cityName :any
   weatherIcon :any 
   weatherDetails :any
+  //topIcon :any 
   
 
   constructor(public httpClient:HttpClient) {
@@ -30,7 +31,8 @@ export class HomePage {
         console.log(this.weatherTemp);
         this.weatherDetails = results['weather'][0]
         console.log(this.weatherDetails);
-        this.weatherIcon = `http://openweathermap.org/img/wn/${this.weatherDetails.icon}@4x.png`
+        this.weatherIcon = `http://openweathermap.org/img/wn/${this.weatherDetails.icon}@2x.png`
+        //this.topIcon = `http://openweathermap.org/img/wn/10d@2x.png`
         
       
       })
