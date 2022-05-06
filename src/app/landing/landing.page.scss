@@ -1,3 +1,43 @@
 ion-content{
     --ion-background-color: rgb(247, 247, 238);
   }
+
+
+  
+  .cardStyle{
+    border-radius: 20px;
+    --ion-background-color: #3B7E88;
+  }
+
+  .image{
+    transform: translate(-50%, -50%);
+  
+    position: fixed;
+    top: 49%;
+    left: 49%;
+  }
+
+  #text{
+    text-align: center;
+    font-weight: 400;
+  }
+
+  #text1{
+      color: rgb(203, 255, 81);
+      font-size: 60px;
+  }
+
+  #text2{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+}
+
+#text3{
+    color: rgb(255, 194, 81);
+    font-size: 60px;
+}
+
+#text4{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
