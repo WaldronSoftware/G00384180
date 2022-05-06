@@ -14,6 +14,10 @@ export class HomePage {
   weatherTemp :any
   todayDate = new Date()
   cityName :any
+  weatherIcon :any 
+  weatherDetails :any
+  
+
   constructor(public httpClient:HttpClient) {
     this.loadData();
   }
@@ -24,6 +28,9 @@ export class HomePage {
         this.weatherTemp = results['main']
         this.cityName = results['name']
         console.log(this.weatherTemp);
+        this.weatherDetails = results['weather'][0]
+        console.log(this.weatherDetails);
+        this.weatherIcon = `http://openweathermap.org/img/wn/${this.weatherDetails.icon}@4x.png`
         
       
       })

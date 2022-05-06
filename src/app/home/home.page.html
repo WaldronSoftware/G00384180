@@ -17,6 +17,7 @@
         {{(weatherTemp?.temp - 273.15).toFixed(0)}}
       </span>
       <span>°C</span>
+      <img slot="end" [src]=weatherIcon/>
     </ion-item>
 
     <!--Display Cityname-->
