@@ -4,24 +4,21 @@
 
 <ion-content [fullscreen]="true">
 
-
+<div>
+  <p></p>
+</div>
   
   <!-- Animated Searchbar from Ionic-->
-<ion-searchbar animated></ion-searchbar>
+<ion-searchbar class="searchBar" placeholder="Type City" animated></ion-searchbar>
   
   <ion-card class="cardStyle">
-<!--Display Date-->
-    <ion-item>
-      <p>Report</p>
-      <ion-label slot="end">{{todayDate | date: "EEE dd MMM Y"}}</ion-label>
-    </ion-item>
 
     <!--Call Weather display and convert to degrees celcius-->
     <ion-item lines="none">
       <span id="temp">
         {{(weatherTemp?.temp - 273.15).toFixed(0)}}<!--To correct the value-->
       </span>
-      <span id="temp">°C</span>
+      <span id="tempId">°C</span>
       <img slot="end" [src]=weatherIcon/>
     </ion-item>
 
@@ -29,6 +26,7 @@
     <ion-item lines="none">
       <ion-icon id="locationIcon" name="location"></ion-icon>
       <span>{{cityName}}</span>
+      <ion-label id="dateText" slot="end">{{todayDate | date: "EEE dd MMM Y"}}</ion-label>
     </ion-item>
   </ion-card>
 

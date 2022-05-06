@@ -42,6 +42,25 @@ span{
   margin: 1px;
 }
 
+#tempId{
+  color: #F6B844;
+}
+
 #locationIcon{
   color: #F6B844;
+}
+
+#dateText{
+  color: white;
+}
+
+.searchBar{
+  
+--ion-background-color: #3B7E88;
+  color: white;
+  
+}
+
+ion-content{
+  --ion-background-color: rgb(247, 247, 238);
 }
