@@ -61,6 +61,24 @@ span{
   
 }
 
+ion-spinner{
+  
+  position: center;
+  width: 50px;
+  height: 40px;
+  stroke: black;
+  fill: yellow;
+  
+}
+
+.spin{
+  transform: translate(-50%, -50%);
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
 ion-content{
   --ion-background-color: rgb(247, 247, 238);
 }
