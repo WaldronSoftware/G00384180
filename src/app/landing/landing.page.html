@@ -2,7 +2,36 @@
 <ion-content>
 
 <div>
-  <p>Hello</p>
+  <p>Landing Page</p>
 </div>
+
+
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="landing" [routerLink]="['/landing']">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="Weather" [routerLink]="['/home']">
+      <ion-icon name="cloud"></ion-icon>
+      <ion-label>Weather</ion-label>
+    </ion-tab-button>
+
+    
+      <ion-tab-button tab="About" [routerLink]="['/about']">
+        <ion-icon name="information"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Settings" [routerLink]="['/settings']">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
 
 </ion-content>
