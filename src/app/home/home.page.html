@@ -72,9 +72,19 @@
       <span slot="end">{{(weatherTemp.temp_min - 273.15).toFixed(0)}}°C</span>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <span>Humidity</span>
       <span slot="end">{{weatherTemp.humidity}}%</span>
+    </ion-item>
+
+    <ion-item lines="none">
+      <span>Wind</span>
+      <span slot="end">{{weatherTemp.wind}}m/s</span>
+    </ion-item>
+
+    <ion-item lines="none">
+      <span>Visibility</span>
+      <span slot="end">{{(weatherTemp.feels_like - 273.15).toFixed(0)}}km</span>
     </ion-item>
   
   </ion-card>
